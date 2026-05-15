@@ -1,173 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="hero">
-
-<!-- Profile Image -->
-<img src="https://github.com/ashutoshsoni891.png"
-      alt="Ashutosh Soni"
-      class="profile-pic" />
-
-<h1>Building Scalable AI & Backend Systems</h1>
-<p>
-  I help startups ship AI-powered products fast — and help companies
-  scale backend systems reliably.
-</p>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashutosh Soni | AI & Backend Engineer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aashutosh Soni | AI & Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg:      #07090e;
+  --bg2:     #0b0f18;
+  --bg3:     #0f1520;
+  --surface: #121a25;
+  --surface2:#16202e;
+  --border:  #1c2a3a;
+  --border2: #243547;
+  --cyan:    #00d4ff;
+  --cyan2:   #009fc0;
+  --green:   #3de07a;
+  --amber:   #f59e0b;
+  --pink:    #f472b6;
+  --purple:  #a78bfa;
+  --text:    #dde8f5;
+  --text2:   #7b93ae;
+  --text3:   #3d5268;
+  --mono:    'JetBrains Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --radius:  10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.75;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+.orb1{width:700px;height:700px;top:-250px;left:-250px;background:var(--cyan);opacity:.07}
+.orb2{width:500px;height:500px;bottom:-150px;right:-150px;background:var(--purple);opacity:.07}
+.orb3{width:350px;height:350px;top:55%;left:45%;background:var(--green);opacity:.04}
 
-  <meta name="description" content="AI & Backend Systems Engineer helping startups build scalable AI-powered cloud systems. Open for startup contracts & senior engineering roles." />
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 44px;background:rgba(7,9,14,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.logo{font-family:var(--display);font-weight:800;font-size:17px;color:var(--text);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-right{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:6px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.btn-p{background:var(--cyan);color:var(--bg)}
+.btn-p:hover{background:var(--cyan2);transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,212,255,.28)}
+.btn-o{background:transparent;color:var(--text2);border:1px solid var(--border2)}
+.btn-o:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,.04)}
+.btn-uw{background:#14ba40;color:#fff}
+.btn-uw:hover{background:#0fa035;transform:translateY(-1px);box-shadow:0 6px 22px rgba(20,186,64,.3)}
 
-  <link rel="stylesheet" href="style.css" />
+/* LAYOUT */
+main{position:relative;z-index:1}
+.container{max-width:1080px;margin:0 auto;padding:0 40px}
+section{padding:96px 0}
+.sl{font-size:10px;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.sl::after{content:'';flex:1;max-width:50px;height:1px;background:var(--border2)}
+.st{font-family:var(--display);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.03em;color:var(--text);margin-bottom:12px}
+.ss{font-size:13px;color:var(--text2);line-height:1.75;max-width:580px;margin-bottom:56px}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.hg{display:grid;grid-template-columns:1fr 330px;gap:60px;align-items:center}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(61,224,122,.07);border:1px solid rgba(61,224,122,.2);border-radius:100px;padding:5px 14px;font-size:11px;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.hbadge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.hn{font-family:var(--display);font-size:clamp(40px,6.5vw,76px);font-weight:800;letter-spacing:-.04em;line-height:.95;color:var(--text);margin-bottom:14px}
+.hn em{color:var(--cyan);font-style:normal}
+.htag{font-size:13px;color:var(--text2);margin-bottom:10px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pip{width:3px;height:3px;border-radius:50%;background:var(--border2)}
+.rt{color:var(--amber)}
+.hdesc{font-size:13px;color:var(--text2);line-height:1.8;max-width:540px;margin-bottom:32px}
+.hdesc strong{color:var(--cyan);font-weight:600}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.hkpis{display:flex;gap:36px;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap}
+.kv{font-family:var(--display);font-size:26px;font-weight:800;color:var(--text);display:block}
+.kv small{font-size:14px;color:var(--cyan)}
+.kl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+
+/* TERMINAL */
+.terminal{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.55),0 0 0 1px rgba(0,212,255,.04)}
+.tbar{background:var(--bg3);padding:11px 16px;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--border)}
+.dot{width:10px;height:10px;border-radius:50%}
+.dr{background:#ff5f57}.dy{background:#febc2e}.dg{background:#28c840}
+.ttitle{margin-left:8px;font-size:10px;color:var(--text3);letter-spacing:.05em}
+.tbody{padding:20px;font-size:11.5px;line-height:2}
+.tp{color:var(--cyan2)}.tc{color:var(--text)}.tk{color:var(--purple)}.tv{color:var(--green)}.ts{color:var(--amber)}.tn{color:var(--pink)}.tcmt{color:var(--text3)}
+.cursor{display:inline-block;width:7px;height:13px;background:var(--cyan);vertical-align:middle;animation:blink 1s step-end infinite;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+
+/* UPWORK BANNER */
+.uw-banner{background:linear-gradient(135deg,rgba(20,186,64,.07) 0%,rgba(0,212,255,.04) 100%);border:1px solid rgba(20,186,64,.2);border-radius:12px;padding:28px 32px;display:flex;align-items:center;flex-wrap:wrap;gap:28px;margin-bottom:52px}
+.uw-logo{font-family:var(--display);font-size:26px;font-weight:800;color:#14ba40;letter-spacing:-.02em;flex-shrink:0}
+.uw-logo span{color:var(--text3)}
+.uw-sub{font-size:10px;color:var(--text2);margin-top:2px}
+.uw-stats{display:flex;gap:32px;flex-wrap:wrap;flex:1}
+.uwn{font-family:var(--display);font-size:22px;font-weight:800;color:var(--text)}
+.uwl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:1px}
+
+/* GITHUB */
+.gh-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:12px}
+.gh-title{font-family:var(--display);font-weight:700;font-size:16px;color:var(--text)}
+.gh-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.gh-img{width:100%;border-radius:8px;border:1px solid var(--border)}
+.gh-chart{width:100%;border-radius:8px;border:1px solid var(--border);grid-column:1/-1}
+
+/* PROFILES */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;text-decoration:none;display:flex;flex-direction:column;transition:all .25s;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--ca,var(--cyan));opacity:0;transition:opacity .25s}
+.pc:hover{transform:translateY(-4px);border-color:var(--ca,var(--cyan));box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.pc:hover::before{opacity:1}
+.pi{font-size:26px;margin-bottom:12px}
+.pn{font-family:var(--display);font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px}
+.ph{font-size:11px;color:var(--text3);margin-bottom:10px}
+.pd{font-size:12px;color:var(--text2);line-height:1.65;flex:1}
+.pm{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.pb{font-size:10px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2)}
+.plink{margin-top:14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:5px;transition:all .2s}
+.pc:hover .plink{color:var(--ca,var(--cyan));gap:9px}
+
+/* STACK */
+#stack{background:var(--bg2)}
+.cb{margin-bottom:36px}
+.cl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:12px;border-left:2px solid var(--cyan);padding-left:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:6px;font-size:11.5px;font-weight:600;border:1px solid var(--border);background:var(--surface);color:var(--text2);transition:all .2s;cursor:default}
+.tag:hover{transform:translateY(-2px)}
+.tml{border-color:rgba(167,139,250,.25)}.tml:hover{border-color:var(--purple);color:var(--purple);background:rgba(167,139,250,.05)}
+.taw{border-color:rgba(245,158,11,.25)}.taw:hover{border-color:var(--amber);color:var(--amber);background:rgba(245,158,11,.05)}
+.tdb{border-color:rgba(61,224,122,.25)}.tdb:hover{border-color:var(--green);color:var(--green);background:rgba(61,224,122,.05)}
+.tbe:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,.05)}
+
+/* EXPERIENCE */
+.exl{display:flex;flex-direction:column;gap:14px}
+.ex{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.ex::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--border2);transition:background .2s}
+.ex:hover{border-color:var(--border2);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.ex:hover::before{background:var(--cyan)}
+.exh{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:4px;flex-wrap:wrap}
+.exr{font-family:var(--display);font-size:17px;font-weight:700;color:var(--text)}
+.exp{font-size:10px;color:var(--text3);white-space:nowrap;padding:3px 10px;border:1px solid var(--border);border-radius:4px;background:var(--bg3)}
+.exco{font-size:12px;color:var(--cyan);text-decoration:none;margin-bottom:16px;display:block}
+.exco:hover{text-decoration:underline}
+.mts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.mt{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 16px;min-width:100px}
+.mv{font-family:var(--display);font-size:20px;font-weight:800;color:var(--cyan)}
+.ml{font-size:10px;color:var(--text3);margin-top:1px}
+.buls{list-style:none}
+.buls li{font-size:12.5px;color:var(--text2);padding:3px 0 3px 16px;position:relative}
+.buls li::before{content:'▸';position:absolute;left:0;top:5px;color:var(--cyan2);font-size:9px}
+.tr{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tb{font-size:10px;color:var(--text3);background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2px 8px;letter-spacing:.04em}
+
+/* SKILLS */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.sgt{font-family:var(--display);font-size:12px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:26px}
+.sr{margin-bottom:18px}
+.stop{display:flex;justify-content:space-between;font-size:12px;margin-bottom:7px}
+.sn{color:var(--text)}.sp{color:var(--text3)}
+.bb{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.bf{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--fa,var(--cyan2)),var(--fb,var(--cyan)));transform-origin:left;animation:gb 1.3s cubic-bezier(.22,.61,.36,1) both;animation-delay:var(--d,0s)}
+@keyframes gb{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* PROJECTS */
+.prjg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.prj{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;display:flex;flex-direction:column;transition:all .25s}
+.prj:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.pt{font-size:10px;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.ptt{font-family:var(--display);font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.pd2{font-size:12px;color:var(--text2);line-height:1.65;flex:1}
+.ps{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+
+/* CONTACT */
+#contact{background:var(--bg2)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.cbig{font-family:var(--display);font-size:clamp(24px,3.5vw,36px);font-weight:800;letter-spacing:-.03em;color:var(--text);margin-bottom:16px;line-height:1.1}
+.cbig em{color:var(--cyan);font-style:normal}
+.cf{display:flex;flex-direction:column;gap:12px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fi{display:flex;flex-direction:column;gap:6px}
+.fi label{font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase}
+.fi input,.fi textarea{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text);font-family:var(--mono);font-size:12px;resize:vertical;outline:none;transition:border-color .2s}
+.fi input:focus,.fi textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08)}
+.fi textarea{min-height:110px}
+
+footer{border-top:1px solid var(--border);padding:32px 0}
+.fin{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.fc{font-size:11px;color:var(--text3)}
+.fl{display:flex;gap:18px}
+.fl a{font-size:11px;color:var(--text3);text-decoration:none}
+.fl a:hover{color:var(--cyan)}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  nav{padding:12px 20px}
+  .nav-links{display:none}
+  .container{padding:0 20px}
+  section{padding:70px 0}
+  .hg{grid-template-columns:1fr}
+  .terminal{display:none}
+  .hkpis{gap:20px}
+  .uw-banner{flex-direction:column}
+  .gh-grid{grid-template-columns:1fr}
+  .sg{grid-template-columns:1fr;gap:32px}
+  .cg{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
+<div class="grid-bg"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
 
-  <nav>
-    <div class="logo">Ashutosh Soni</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle">🌙</button>
-    </div>
-  </nav>
+<nav>
+  <a class="logo" href="#">Aashutosh<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="#profiles">Profiles</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="btn btn-o" href="https://github.com/ashutoshsoni891" target="_blank">GitHub</a>
+    <a class="btn btn-p" href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank">Hire on Upwork</a>
+  </div>
+</nav>
 
-  <header class="hero">
-    <h1>Building Scalable AI & Backend Systems</h1>
-    <p>
-      I help startups ship AI-powered products fast — and help companies
-      scale backend systems reliably.
-    </p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Work With Me</a>
-      <a href="#projects" class="btn-secondary">View Projects</a>
-    </div>
-  </header>
-
-  <section id="about" class="glass">
-    <h2>About Me</h2>
-    <p>
-      Senior Backend & AI Engineer with 8+ years experience designing
-      event-driven, serverless, and AI-integrated systems.
-    </p>
-    <ul>
-      <li>🚀 Built AI automation platforms</li>
-      <li>⚡ Designed 1M+ events/month systems</li>
-      <li>💰 Reduced infrastructure cost by 40%</li>
-      <li>🔐 OAuth-compliant & enterprise-ready architectures</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="project-grid">
-
-      <div class="project-card glass">
-        <h3>AI Calendar Intelligence Platform</h3>
-        <p>LLM-powered automation with secure OAuth integration.</p>
+<main>
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hg">
+      <div>
+        <div class="hbadge">Open to Contract &amp; Full-time</div>
+        <h1 class="hn">Building<br/>Scalable<br/><em>AI Systems</em></h1>
+        <div class="htag">
+          <span>Senior Backend Engineer</span>
+          <span class="pip"></span>
+          <span>Full-Stack ML Engineer</span>
+          <span class="pip"></span>
+          <span class="rt">SDE3</span>
+        </div>
+        <p class="hdesc">
+          I help startups ship AI-powered products fast — and help companies scale backend systems reliably.
+          <strong>8+ years</strong> designing event-driven, cloud-native, and AI-integrated systems handling
+          <strong>100M+ daily transactions</strong> at 99.97% uptime.
+        </p>
+        <div class="hbtns">
+          <a class="btn btn-uw" href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank">💰 Hire on Upwork</a>
+          <a class="btn btn-o" href="https://github.com/ashutoshsoni891" target="_blank">⬡ GitHub</a>
+          <a class="btn btn-o" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hkpis">
+          <div><span class="kv">8<small>+</small></span><div class="kl">Years Exp.</div></div>
+          <div><span class="kv">100<small>M+</small></span><div class="kl">Daily TXNs</div></div>
+          <div><span class="kv">99.97<small>%</small></span><div class="kl">Uptime SLA</div></div>
+          <div><span class="kv">$10<small>K+</small></span><div class="kl">Upwork Earned</div></div>
+        </div>
       </div>
-
-      <div class="project-card glass">
-        <h3>Event-Driven Serverless System</h3>
-        <p>AWS Lambda + EventBridge handling 1M+ events/month.</p>
+      <div class="terminal">
+        <div class="tbar">
+          <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
+          <span class="ttitle">~/profile — zsh</span>
+        </div>
+        <div class="tbody">
+          <div><span class="tp">❯</span> <span class="tc">cat engineer.json</span></div><br/>
+          <div style="color:var(--border2)">{</div>
+          <div style="padding-left:14px"><span class="tk">"name"</span>: <span class="ts">"Aashutosh Soni"</span>,</div>
+          <div style="padding-left:14px"><span class="tk">"base"</span>: <span class="ts">"Indore 🇮🇳"</span>,</div>
+          <div style="padding-left:14px"><span class="tk">"yoe"</span>: <span class="tn">8</span>,</div>
+          <div style="padding-left:14px"><span class="tk">"upwork"</span>: {</div>
+          <div style="padding-left:28px"><span class="tk">"earned"</span>: <span class="ts">"$10,000+"</span>,</div>
+          <div style="padding-left:28px"><span class="tk">"jobs"</span>: <span class="tn">40</span>,</div>
+          <div style="padding-left:28px"><span class="tk">"hours"</span>: <span class="tn">290</span></div>
+          <div style="padding-left:14px">},</div>
+          <div style="padding-left:14px"><span class="tk">"focus"</span>: [<span class="ts">"LLM/RAG"</span>, <span class="ts">"K8s"</span>, <span class="ts">"Agents"</span>],</div>
+          <div style="padding-left:14px"><span class="tk">"available"</span>: <span class="tv">true</span></div>
+          <div style="color:var(--border2)">}</div>
+          <br/><div><span class="tp">❯</span> <span class="cursor"></span></div>
+        </div>
       </div>
-
-      <div class="project-card glass">
-        <h3>Agentic RAG Engine</h3>
-        <p>Tool-calling AI system with autonomous reasoning.</p>
-      </div>
-
     </div>
-  </section>
-
-  <section id="presence">
-  <h2>Professional Presence</h2>
-
-  <div class="project-grid">
-
-    <!-- Upwork -->
-    <div class="project-card glass">
-      <h3>Upwork</h3>
-      <p>💰 <strong>$10,000+ Earnings</strong></p>
-      <p>📦 40+ Jobs Completed</p>
-      <p>⏱️ 290+ Hours Worked</p>
-      <p>💼 Open to Contract & Contract-to-Hire</p>
-      <a href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank">
-        View Upwork Profile →
-      </a>
-    </div>
-
-    <!-- GitHub -->
-    <div class="project-card glass">
-      <h3>GitHub</h3>
-      <p>Active contributor building backend & AI systems.</p>
-
-      <!-- Contribution Heatmap -->
-      <img src="https://ghchart.rshah.org/ashutoshsoni891"
-          alt="GitHub Contribution Chart"
-          style="width:100%; margin-top:10px; border-radius:10px;" />
-
-      <!-- GitHub Stats Card -->
-      <img src="https://github-readme-stats.vercel.app/api?username=ashutoshsoni891&show_icons=true&theme=transparent"
-          alt="GitHub Stats"
-          style="width:100%; margin-top:15px;" />
-
-      <a href="https://github.com/ashutoshsoni891" target="_blank">
-        Visit GitHub Profile →
-      </a>
-    </div>
-
-    <!-- StackOverflow -->
-    <div class="project-card glass">
-      <h3>StackOverflow</h3>
-      <p>📊 95 Reputation</p>
-      <p>👀 100k+ Reach</p>
-      <p>🏅 1 Silver | 10 Bronze Badges</p>
-      <a href="https://stackoverflow.com/users/9077599/aashutosh-soni" target="_blank">
-        View StackOverflow →
-      </a>
-    </div>
-
-    <!-- LinkedIn -->
-    <div class="project-card glass">
-      <h3>LinkedIn</h3>
-      <p>Senior Backend & AI Engineer</p>
-      <p>Startup & Cloud Systems Specialist</p>
-      <a href="https://linkedin.com/in/ashutoshsoni891" target="_blank">
-        Connect on LinkedIn →
-      </a>
-    </div>
-
   </div>
 </section>
 
-  <section id="blog" class="glass">
-    <h2>Writing</h2>
-    <p>Coming soon: Articles on AI systems, startup architecture & cloud scaling.</p>
-  </section>
+<!-- PROFILES -->
+<section id="profiles" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sl">Online Presence</div>
+    <h2 class="st">Find Me Here</h2>
+    <p class="ss">Freelance work, open source, and professional network — all the places you can hire or connect.</p>
 
-  <section id="contact">
-    <h2>Let’s Build Something Great</h2>
+    <div class="uw-banner fade">
+      <div>
+        <div class="uw-logo">up<span>work</span></div>
+        <div class="uw-sub">Top-Rated Freelancer · Contract &amp; Contract-to-Hire</div>
+      </div>
+      <div class="uw-stats">
+        <div><div class="uwn">$10K+</div><div class="uwl">Total Earned</div></div>
+        <div><div class="uwn">40+</div><div class="uwl">Jobs Completed</div></div>
+        <div><div class="uwn">290+</div><div class="uwl">Hours Worked</div></div>
+        <div><div class="uwn">5.0★</div><div class="uwl">Job Success</div></div>
+      </div>
+      <a class="btn btn-uw" href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank">View Upwork Profile →</a>
+    </div>
 
-    <!-- Replace action with your Formspree endpoint -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+    <div class="fade" style="margin-bottom:52px">
+      <div class="gh-top">
+        <div class="gh-title">🐙 GitHub — ashutoshsoni891</div>
+        <a class="btn btn-o" href="https://github.com/ashutoshsoni891" target="_blank">Visit Profile →</a>
+      </div>
+      <div class="gh-grid">
+        <img class="gh-img" src="https://github-readme-stats.vercel.app/api?username=ashutoshsoni891&show_icons=true&theme=transparent&bg_color=0b0f18&border_color=1c2a3a&title_color=00d4ff&icon_color=00d4ff&text_color=7b93ae" alt="GitHub Stats" loading="lazy" />
+        <img class="gh-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ashutoshsoni891&layout=compact&theme=transparent&bg_color=0b0f18&border_color=1c2a3a&title_color=00d4ff&text_color=7b93ae" alt="Top Languages" loading="lazy" />
+        <img class="gh-chart" src="https://ghchart.rshah.org/00d4ff/ashutoshsoni891" alt="GitHub Contributions" loading="lazy" />
+      </div>
+    </div>
 
-    <p class="contact-alt">
-      Or reach directly at: ashutoshsoni891@gmail.com
-    </p>
-  </section>
+    <div class="pg fade">
+      <a class="pc" href="https://linkedin.com/in/ashutoshsoni891" target="_blank" style="--ca:#0077b5">
+        <div class="pi">💼</div>
+        <div class="pn">LinkedIn</div>
+        <div class="ph">/in/ashutoshsoni891</div>
+        <div class="pd">Senior Backend &amp; AI Engineer · Startup &amp; Cloud Systems Specialist.</div>
+        <div class="plink">Connect →</div>
+      </a>
+      <a class="pc" href="https://stackoverflow.com/users/9077599/aashutosh-soni" target="_blank" style="--ca:#f48024">
+        <div class="pi">📊</div>
+        <div class="pn">Stack Overflow</div>
+        <div class="ph">aashutosh-soni</div>
+        <div class="pd">Helping developers with backend and ML engineering questions.</div>
+        <div class="pm">
+          <span class="pb">95 Rep</span>
+          <span class="pb">100K+ Reach</span>
+          <span class="pb">1 Silver · 10 Bronze</span>
+        </div>
+        <div class="plink">View Profile →</div>
+      </a>
+      <a class="pc" href="mailto:ashutoshsoni891@gmail.com" style="--ca:#ea4335">
+        <div class="pi">✉️</div>
+        <div class="pn">Email</div>
+        <div class="ph">ashutoshsoni891@gmail.com</div>
+        <div class="pd">Best way to reach me for freelance, consulting, or full-time opportunities.</div>
+        <div class="plink">Send Email →</div>
+      </a>
+      <a class="pc" href="tel:+919926552237" style="--ca:#25d366">
+        <div class="pi">📱</div>
+        <div class="pn">Phone / WhatsApp</div>
+        <div class="ph">+91-9926552237</div>
+        <div class="pd">Available for calls from Indore, India (IST). Quick project discussions welcome.</div>
+        <div class="plink">Message →</div>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Ashutosh Soni | AI & Backend Systems Engineer</p>
-  </footer>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="sl">Selected Work</div>
+    <h2 class="st">Projects</h2>
+    <p class="ss">AI automation, serverless infrastructure, and agentic reasoning systems built for production.</p>
+    <div class="prjg fade">
+      <div class="prj">
+        <div class="pt">AI · LLM · OAuth</div>
+        <div class="ptt">AI Calendar Intelligence Platform</div>
+        <div class="pd2">LLM-powered automation with secure OAuth integration. Parses natural language intent to schedule, reschedule, and prioritise calendar events autonomously.</div>
+        <div class="ps"><span class="tb">LangChain</span><span class="tb">FastAPI</span><span class="tb">OAuth2</span><span class="tb">OpenAI</span></div>
+      </div>
+      <div class="prj">
+        <div class="pt">Serverless · AWS · Event-Driven</div>
+        <div class="ptt">Event-Driven Serverless System</div>
+        <div class="pd2">AWS Lambda + EventBridge pipeline handling 1M+ events/month with guaranteed delivery, dead-letter queues, and real-time dashboards on CloudWatch.</div>
+        <div class="ps"><span class="tb">AWS Lambda</span><span class="tb">EventBridge</span><span class="tb">DynamoDB</span><span class="tb">Terraform</span></div>
+      </div>
+      <div class="prj">
+        <div class="pt">AI · RAG · Agents</div>
+        <div class="ptt">Agentic RAG Engine</div>
+        <div class="pd2">Tool-calling AI system with autonomous multi-step reasoning. Retrieves from vector stores, calls external APIs, and synthesises structured answers via LangGraph.</div>
+        <div class="ps"><span class="tb">LangGraph</span><span class="tb">RAG</span><span class="tb">Pinecone</span><span class="tb">FastAPI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- STACK -->
+<section id="stack">
+  <div class="container">
+    <div class="sl">Tech Stack</div>
+    <h2 class="st">What I Build With</h2>
+    <p class="ss">Battle-tested across the full spectrum — from ML model training to cloud-native distributed systems.</p>
+    <div class="fade">
+      <div class="cb"><div class="cl">Languages</div><div class="tags"><span class="tag tbe">🐍 Python</span><span class="tag tbe">📘 TypeScript</span><span class="tag tbe">🌐 JavaScript</span><span class="tag tbe">🗃️ SQL</span><span class="tag tbe">⚡ C++</span><span class="tag tbe">🐹 Go</span></div></div>
+      <div class="cb"><div class="cl">Backend &amp; APIs</div><div class="tags"><span class="tag tbe">FastAPI</span><span class="tag tbe">Node.js</span><span class="tag tbe">Django</span><span class="tag tbe">Express.js</span><span class="tag tbe">Flask</span><span class="tag tbe">Fastify</span><span class="tag tbe">GraphQL</span><span class="tag tbe">gRPC</span><span class="tag tbe">REST</span></div></div>
+      <div class="cb"><div class="cl">AI / Machine Learning</div><div class="tags"><span class="tag tml">🦜 LangChain</span><span class="tag tml">🕸️ LangGraph</span><span class="tag tml">🔍 RAG</span><span class="tag tml">🤗 Hugging Face</span><span class="tag tml">🔥 PyTorch</span><span class="tag tml">TensorFlow</span><span class="tag tml">BERT / LSTM</span><span class="tag tml">Detectron2</span><span class="tag tml">MLflow</span><span class="tag tml">ONNX / TensorRT</span><span class="tag tml">OpenAI API</span><span class="tag tml">YOLOv5</span></div></div>
+      <div class="cb"><div class="cl">Cloud &amp; DevOps</div><div class="tags"><span class="tag taw">☁️ AWS EC2/ECS/EKS</span><span class="tag taw">🐳 Docker</span><span class="tag taw">☸️ Kubernetes</span><span class="tag taw">🏗️ Terraform</span><span class="tag taw">⚙️ GitHub Actions</span><span class="tag taw">Jenkins</span><span class="tag taw">SageMaker</span><span class="tag taw">Lambda</span></div></div>
+      <div class="cb"><div class="cl">Databases &amp; Messaging</div><div class="tags"><span class="tag tdb">PostgreSQL</span><span class="tag tdb">MongoDB</span><span class="tag tdb">DynamoDB</span><span class="tag tdb">Redis</span><span class="tag tdb">Elasticsearch</span><span class="tag tdb">Neo4j</span><span class="tag tdb">Kafka</span><span class="tag tdb">RabbitMQ</span><span class="tag tdb">Apache Airflow</span></div></div>
+      <div class="cb"><div class="cl">Architecture</div><div class="tags"><span class="tag tbe">Microservices</span><span class="tag tbe">Event-Driven</span><span class="tag tbe">CQRS</span><span class="tag tbe">DDD</span><span class="tag tbe">Agentic AI</span><span class="tag tbe">Multi-Agent Workflows</span><span class="tag tbe">12-Factor Apps</span><span class="tag tbe">Circuit Breaker</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sl">Career</div>
+    <h2 class="st">Work Experience</h2>
+    <p class="ss">8+ years across AI product companies, blockchain infra, and ML systems. Real numbers, real impact.</p>
+    <div class="exl fade">
+      <div class="ex">
+        <div class="exh"><div class="exr">Senior Software Engineer — SDE3</div><span class="exp">Aug 2023 – Apr 2026</span></div>
+        <a class="exco" href="https://www.odin-ai.com/" target="_blank">↗ Odin AI · Remote</a>
+        <div class="mts">
+          <div class="mt"><div class="mv">50M+</div><div class="ml">Daily API requests</div></div>
+          <div class="mt"><div class="mv">78%</div><div class="ml">Latency improvement</div></div>
+          <div class="mt"><div class="mv">42%</div><div class="ml">Infra cost reduction</div></div>
+          <div class="mt"><div class="mv">$2.3M</div><div class="ml">Revenue impact/yr</div></div>
+        </div>
+        <ul class="buls">
+          <li>Led technical strategy for AI inference &amp; agentic platform (LangChain, LangGraph) across 12-engineer team</li>
+          <li>Architected 18 microservices serving 25K+ concurrent users on AWS ECS/EKS — 99.97% uptime</li>
+          <li>Drove monolith → cloud-native migration with Docker, Kubernetes, Terraform</li>
+          <li>Real-time LLM inference pipeline with RAG &amp; Hugging Face — 15+ production ML deployments</li>
+          <li>Mentored 8 engineers, reduced onboarding 35%, conducted 40+ technical interviews</li>
+        </ul>
+        <div class="tr"><span class="tb">FastAPI</span><span class="tb">Node.js</span><span class="tb">LangChain</span><span class="tb">LangGraph</span><span class="tb">AWS EKS</span><span class="tb">Terraform</span><span class="tb">React</span><span class="tb">OpenAI</span></div>
+      </div>
+      <div class="ex">
+        <div class="exh"><div class="exr">Senior Backend Engineer</div><span class="exp">Feb 2022 – Jul 2023</span></div>
+        <a class="exco" href="https://www.chainflux.com/" target="_blank">↗ ChainFlux · Bangalore, India</a>
+        <div class="mts">
+          <div class="mt"><div class="mv">10M+</div><div class="ml">Daily transactions</div></div>
+          <div class="mt"><div class="mv">65%</div><div class="ml">Faster API responses</div></div>
+          <div class="mt"><div class="mv">15 min</div><div class="ml">Incident MTTR (was 2h)</div></div>
+        </div>
+        <ul class="buls">
+          <li>15+ microservices on TypeScript/Node.js with Kafka — sub-100ms, 99.95% uptime</li>
+          <li>Implemented DDD, CQRS, event-driven patterns — 40% reduction in code complexity</li>
+          <li>Observability stack with CloudWatch, Prometheus, Grafana — incident response from 2h → 15 min</li>
+        </ul>
+        <div class="tr"><span class="tb">TypeScript</span><span class="tb">Node.js</span><span class="tb">Kafka</span><span class="tb">PostgreSQL</span><span class="tb">DynamoDB</span><span class="tb">Redis</span><span class="tb">Grafana</span></div>
+      </div>
+      <div class="ex">
+        <div class="exh"><div class="exr">Full-Stack ML Engineer</div><span class="exp">Jan 2019 – Dec 2021</span></div>
+        <a class="exco" href="https://www.torquevision.ai/" target="_blank">↗ TorqueVision Labs · Seattle, USA (Remote)</a>
+        <div class="mts">
+          <div class="mt"><div class="mv">500K+</div><div class="ml">Images/day processed</div></div>
+          <div class="mt"><div class="mv">92%</div><div class="ml">Detection accuracy</div></div>
+          <div class="mt"><div class="mv">$180K</div><div class="ml">Annotation saved/yr</div></div>
+        </div>
+        <ul class="buls">
+          <li>End-to-end ML pipeline on AWS SageMaker — TensorFlow, PyTorch, MLflow, S3 versioning</li>
+          <li>Custom Detectron2 keypoint detector at 92% accuracy — saved $180K/year in annotation costs</li>
+          <li>BERT/LSTM/CNN NLP at 94% accuracy, serving 100K+ daily predictions</li>
+          <li>55% inference boost via ONNX export, TensorRT quantization, batch processing</li>
+        </ul>
+        <div class="tr"><span class="tb">PyTorch</span><span class="tb">TensorFlow</span><span class="tb">Detectron2</span><span class="tb">ONNX</span><span class="tb">TensorRT</span><span class="tb">SageMaker</span><span class="tb">Django</span></div>
+      </div>
+      <div class="ex">
+        <div class="exh"><div class="exr">ML Engineer &amp; Data Analyst</div><span class="exp">Mar 2018 – Dec 2018</span></div>
+        <a class="exco" href="https://www.deeplogix.tech/" target="_blank">↗ DeepLogix Technologies · Indore, India</a>
+        <ul class="buls">
+          <li>Fraud detection &amp; AML with XGBoost/scikit-learn — identified $2.5M+ in fraudulent transactions</li>
+          <li>Data pipeline: 50K+ credit card requests/day at 99.8% accuracy</li>
+          <li>ETL optimisation cut processing time from 4h to 45 min via parallelisation</li>
+        </ul>
+        <div class="tr"><span class="tb">Python</span><span class="tb">XGBoost</span><span class="tb">scikit-learn</span><span class="tb">PostgreSQL</span><span class="tb">Apache Airflow</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sl">Expertise</div>
+    <h2 class="st">Core Strengths</h2>
+    <p class="ss">Proficiency built through real production systems at scale.</p>
+    <div class="sg fade">
+      <div>
+        <div class="sgt">Backend &amp; Infrastructure</div>
+        <div class="sr"><div class="stop"><span class="sn">Python / FastAPI</span><span class="sp">98%</span></div><div class="bb"><div class="bf" style="width:98%;--d:.1s"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">TypeScript / Node.js</span><span class="sp">95%</span></div><div class="bb"><div class="bf" style="width:95%;--d:.2s"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">Microservices Architecture</span><span class="sp">97%</span></div><div class="bb"><div class="bf" style="width:97%;--d:.3s"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">AWS (EC2 / ECS / EKS)</span><span class="sp">93%</span></div><div class="bb"><div class="bf" style="width:93%;--d:.4s"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">Docker / Kubernetes</span><span class="sp">92%</span></div><div class="bb"><div class="bf" style="width:92%;--d:.5s"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">PostgreSQL / Redis / Kafka</span><span class="sp">90%</span></div><div class="bb"><div class="bf" style="width:90%;--d:.6s"></div></div></div>
+      </div>
+      <div>
+        <div class="sgt">AI / ML Engineering</div>
+        <div class="sr"><div class="stop"><span class="sn">LangChain / LangGraph / RAG</span><span class="sp">95%</span></div><div class="bb"><div class="bf" style="width:95%;--d:.1s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">PyTorch / TensorFlow</span><span class="sp">91%</span></div><div class="bb"><div class="bf" style="width:91%;--d:.2s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">LLM Fine-tuning / Inference</span><span class="sp">90%</span></div><div class="bb"><div class="bf" style="width:90%;--d:.3s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">Computer Vision (Detectron2)</span><span class="sp">88%</span></div><div class="bb"><div class="bf" style="width:88%;--d:.4s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">MLflow / SageMaker / MLOps</span><span class="sp">87%</span></div><div class="bb"><div class="bf" style="width:87%;--d:.5s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+        <div class="sr"><div class="stop"><span class="sn">ONNX / TensorRT (Edge AI)</span><span class="sp">85%</span></div><div class="bb"><div class="bf" style="width:85%;--d:.6s;--fa:#7c3aed;--fb:var(--purple)"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="cg fade">
+      <div>
+        <div class="sl">Get in Touch</div>
+        <div class="cbig">Let's Build<br/><em>Something Great</em></div>
+        <p style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:28px">Open to contract, contract-to-hire, and full-time remote opportunities. AI systems, backend architecture, or ML engineering — let's talk.</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mailto:ashutoshsoni891@gmail.com" class="btn btn-p" style="width:fit-content">✉️ ashutoshsoni891@gmail.com</a>
+          <a href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank" class="btn btn-uw" style="width:fit-content">💰 Hire on Upwork</a>
+          <a href="https://linkedin.com/in/ashutoshsoni891" target="_blank" class="btn btn-o" style="width:fit-content">💼 LinkedIn</a>
+        </div>
+        <div style="margin-top:28px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Response time</div>
+          <div style="font-size:13px;color:var(--text)">Usually within <span style="color:var(--green)">24 hours</span> · IST (UTC+5:30)</div>
+        </div>
+      </div>
+      <div>
+        <div class="cf">
+          <div class="fr">
+            <div class="fi"><label>Name</label><input type="text" id="fn" placeholder="Your name" /></div>
+            <div class="fi"><label>Email</label><input type="email" id="fe" placeholder="you@company.com" /></div>
+          </div>
+          <div class="fi"><label>Subject</label><input type="text" id="fs" placeholder="Project inquiry / Hire / Collaboration" /></div>
+          <div class="fi"><label>Message</label><textarea id="fm" placeholder="Tell me about your project..."></textarea></div>
+          <button class="btn btn-p" style="width:100%;justify-content:center;padding:12px;font-size:12px" onclick="sendMail()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="fin">
+      <div class="fc">© 2026 Aashutosh Soni · Built from Indore 🇮🇳</div>
+      <div class="fl">
+        <a href="https://github.com/ashutoshsoni891" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/ashutoshsoni891" target="_blank">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~011355a6a450f2b1b1" target="_blank">Upwork</a>
+        <a href="https://stackoverflow.com/users/9077599/aashutosh-soni" target="_blank">StackOverflow</a>
+        <a href="mailto:ashutoshsoni891@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.08 });
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+function sendMail(){
+  const n=document.getElementById('fn').value.trim();
+  const e=document.getElementById('fe').value.trim();
+  const s=document.getElementById('fs').value.trim()||'Portfolio Inquiry';
+  const m=document.getElementById('fm').value.trim();
+  if(!n||!m){alert('Please fill in your name and message.');return;}
+  window.location.href=`mailto:ashutoshsoni891@gmail.com?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(`Hi Aashutosh,\n\nName: ${n}\nEmail: ${e}\n\n${m}`)}`;
+}
+</script>
 </body>
 </html>
